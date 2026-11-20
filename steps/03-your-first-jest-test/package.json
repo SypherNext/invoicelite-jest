@@ -1,0 +1,12 @@
+{
+  "name": "invoicelite",
+  "version": "1.0.0",
+  "private": true,
+  "description": "InvoiceLite: a small invoicing library, tested with Jest",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "30.5.2"
+  }
+}

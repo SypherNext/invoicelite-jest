@@ -1,0 +1,19 @@
+# Dependencies (npm ci installs them from package-lock.json)
+node_modules/
+
+# Reports that the tools write
+coverage/
+reports/
+.stryker-tmp/
+
+# IDEs
+.idea/
+.vscode/
+
+# Local environment files (never commit secrets)
+.env
+*.env.local
+
+# OS files
+.DS_Store
+Thumbs.db

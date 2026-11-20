@@ -1,0 +1,40 @@
+{
+  "name": "invoicelite",
+  "version": "1.0.0",
+  "private": true,
+  "description": "InvoiceLite: a small invoicing library, tested with Jest",
+  "scripts": {
+    "test": "node --experimental-vm-modules --disable-warning=ExperimentalWarning node_modules/jest/bin/jest.js",
+    "test:coverage": "npm test -- --coverage",
+    "mutate": "stryker run",
+    "typecheck": "tsc"
+  },
+  "dependencies": {
+    "express": "5.3.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@jest/globals": "30.5.2",
+    "@stryker-mutator/core": "10.1.1",
+    "@stryker-mutator/jest-runner": "10.1.1",
+    "@swc/core": "1.16.22",
+    "@swc/jest": "0.2.39",
+    "@testing-library/dom": "10.4.2",
+    "@testing-library/jest-dom": "7.0.1",
+    "@testing-library/react": "16.3.3",
+    "@testing-library/user-event": "14.6.12",
+    "@types/express": "5.0.6",
+    "@types/node": "26.6.6",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@types/supertest": "7.2.1",
+    "expect": "30.5.2",
+    "fast-check": "4.10.2",
+    "jest": "30.5.2",
+    "jest-environment-jsdom": "30.5.2",
+    "msw": "3.0.6",
+    "supertest": "7.3.2",
+    "typescript": "7.0.2"
+  }
+}

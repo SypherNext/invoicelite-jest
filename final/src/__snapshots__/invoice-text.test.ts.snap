@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`renderInvoiceText renders an issued invoice 1`] = `
+"INVOICE INV-2026-0001
+Customer: Northwind Traders (DE)
+Issued: 2026-11-17   Due: 2026-12-17
+Status: ISSUED
+
+SKU      Description          Qty   Unit price         Total
+MUG-01   Enamel mug             2    EUR 12.50     EUR 25.00
+PEN-10   Gel pen pack           1     EUR 6.40      EUR 6.40
+
+Subtotal                                           EUR 31.40
+Discount                                            EUR 0.00
+Tax (DE)                                            EUR 5.97
+Total                                              EUR 37.37"
+`;
+
+exports[`toInvoiceView turns an invoice into plain JSON data 1`] = `
+{
+  "country": "DE",
+  "customer": "Northwind Traders",
+  "dueDate": "2026-12-17",
+  "issueDate": "2026-11-17",
+  "lines": [
+    {
+      "description": "Enamel mug",
+      "quantity": 2,
+      "sku": "MUG-01",
+      "total": "EUR 25.00",
+      "unitPrice": "EUR 12.50",
+    },
+    {
+      "description": "Gel pen pack",
+      "quantity": 1,
+      "sku": "PEN-10",
+      "total": "EUR 6.40",
+      "unitPrice": "EUR 6.40",
+    },
+  ],
+  "number": "INV-2026-0001",
+  "status": "ISSUED",
+  "totals": {
+    "balanceDue": "EUR 37.37",
+    "balanceDueCents": 3737,
+    "discount": "EUR 0.00",
+    "paid": "EUR 0.00",
+    "subtotal": "EUR 31.40",
+    "tax": "EUR 5.97",
+    "total": "EUR 37.37",
+    "totalCents": 3737,
+  },
+}
+`;
